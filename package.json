@@ -1,0 +1,27 @@
+{
+  "name": "sanakirju-mongodb",
+  "version": "0.9.0",
+  "description": "Sanakirju Dictionary - MongoDB implementation",
+  "main": "index.js",
+  "repository": "https://github.com/stscoundrel/sanakirju-mongodb.git",
+  "author": "stscoundrel <sampo@pixels.fi>",
+  "license": "MIT",
+  "private": false,
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "dependencies": {
+    "mongodb": "^3.6.0",
+    "sanakirju": "^1.0.4"
+  },
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "ratatoskr-log": "^0.9.1"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  }
+}
