@@ -6,6 +6,25 @@ MongoDB implementation of Sanakirju, a Karelian - Finnish dictionary with over 9
 
 `yarn add sanakirju-mongodb`
 
+### Usage
+
+Set up the database:
+
+```javascript
+const { toMongoDB } = require('sanakirju-mongodb')
+
+// Your MongoDB config.
+const config = {
+  url: '', // Your connection string.
+  dbName: 'yourDBName', // Created if new.
+  collectionName: 'yourCollectionName', // Created if new.
+}
+
+// Run only once to create & populate the database.
+const res = await toMongoDB(config)
+console.log(res)
+```
+
 
 ### Sources.
 
