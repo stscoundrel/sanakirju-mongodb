@@ -25,6 +25,26 @@ const res = await toMongoDB(config)
 console.log(res)
 ```
 
+Query the database:
+
+```javascript
+const { getCollection } = require('sanakirju-mongodb')
+
+// Your MongoDB config.
+const config = {...}
+
+/**
+ * Get collection & client instance.
+ * You can also do it yourself without Sanakirju.
+ */
+const { collection, client } = await getCollection(config)
+
+// Any valid MongoDB query.
+const wordsStartingWithU = await collection.find({ startsWith: 'u' }).toArray()
+
+console.log(wordsStartingWithU)
+```
+
 
 ### Sources.
 
